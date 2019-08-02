@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Liner Notes</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Cantata+One&display=swap" rel="stylesheet"> -->
+  <style>
+    @media all {
+      *{ color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body {
+        /* font-family: "Cantata One" serif; */
+        font-family: 'Josefin Sans', sans-serif;
+        color: #EEE;
+        margin: 0;
+        /* background: rgba(31, 51, 32, 0.2); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1in;
+        margin-bottom: 1in;
+      }
+      hr {
+        border-color: #EEE;
+        border-width: 0px 0px 1px 0px;
+      }
+      .mask {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+      }
+      #title {
+        z-index: 2;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        text-align: center;      
+      }
+      #title>span {
+        font-size: 1.25em;
+      }
+      section {
+        margin-bottom: 3.75in;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .row>div {
+        position: relative;
+        width: 4.75in;
+        height: 4.75in;
+        background-size: 100%;
+      }
+      .row>div.inside {
+        background: #eee;
+        color: #0D2149;
+        font-size: 0.75em;
+        padding: 1em;
+        width: calc(4.75in - 3em);
+        height: calc(4.75in - 2em);
+      }
+  
+      .row>div.left {
+        padding-right: 2em;
+      }
+      .row>div.right {
+        padding-left: 2em;
+      }
+      .col {
+        width: 50%;
+      }
+      .col>p {
+        margin: 0;
+        padding-left: 1em;
+        padding-right: 1em;
+        text-indent: -1em;
+      }
+
+      #front {
+        background-image: url('square m.png');
+      }
+      #back {
+        background: #141414;
+        color: #eee;
+        padding: 1em;
+        width: calc(4.75in - 2em);
+        height: calc(4.75in - 2em);
+      }
+      #back * {
+        font-size: 0.75rem;
+      }
+      #back h3 {
+        color: #cda34f;
+        font-weight: 100;
+        font-size: 1.17em;
+      }
+      #back ul {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 0;
+        font-size: 1em;
+      } 
+      #acknowledgements {
+        margin: 5em 0 4em;
+      }
+      #copyright {
+        position: absolute;
+        display: block;
+        width: 85%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--Pages are in order in print two-sided flip on short edge-->
+  <section class="row">
+    <div id="back">
+      <img src="outside mocktail.jpg" alt="out mock" width=150 style="float: right; margin: 1em 0 0 0;">
+      <h3>the guests</h3>
+      <ul>
+        <li>Cooper Allen &middot; vocals</li>
+        <li>Aaron Vaughn &middot; trumpet</li>
+        <li>Sam Hirst &middot; saxophone</li>
+        <li>Kyle Merrill &middot; saxophone</li>
+        <li>Spencer Breeze &middot; trombone</li>
+        <li>Robert Alger &middot; keys, trumpet</li>
+        <li>David Buckley &middot; bass, guitar</li>
+        <li>Kennen Brooks &middot; guitar</li>
+        <li>Justin Roberts &middot; drums</li>
+      </ul>
+      <p id="acknowledgements">
+        To our families, our wives, and children who are with us the whole way and supportive of our musical dreams. 
+        To Madison Van Vleet and Corinn LeBaron for providing amazing live vocals for the group.
+        To Noah Lefgren for always being on call to lend his musical talents.
+        To Ahi Muse steak and sushi in Orem for providing us with our first steady gig and sticking with us through the up and down performances.
+        To Merit Academy for letting us use their music room as rehearsal space.
+        To all our friends who have been there at gigs and put in time behind the scenes to take pictures, promote us, and support us.
+        Thank you all for making this possible.
+      </p>
+      <p id="copyright">
+        Produced, mixed, and mastered by Robert Alger and David Buckley<br/>
+        theguests.band &middot; mountainsidemusic.com &middot; davidjaybuckley.com<br/>
+        &copy; 2019 Mountainside Music &middot; Provo, UT
+      </p>
+    </div>
+    <div id="front">
+      <div id="mask" style="background: rgba(31, 51, 32, 0.2);"></div>
+      <div id="title">
+        <span>mocktail party</span>
+      </div>
+    </div>
+  </section>
+  
+  <section class="row">
+    <div class="inside left">
+      <h1>1 &middot Hold On Tight</h1>
+      <p>"One of my favorite sounds is the Hammond B3 Organ. I love listening to guys like Jimmy Smith, Joey DeFrancesco, and Cory Henry. I wrote the shout chorus to this song in 2017 while experimenting with some traditional gospel chord changes and the rest materialized once The Guests came together and Cooper's voice took the tune to the heights I had hoped it could reach. I just wanted to get a song with an uplifting message out there." - <i>David Buckley</i></p>
+      <article class="row">
+        <article class="col">
+          <h3>Lyrics</h3>
+          <p>So many things in this world try to get you down</p>
+          <p>But I'm telling you, if you stick around</p>
+          <p>It'll be all right</p>
+          <p>Just hold on tight</p>
+          <br/>
+          <p>So many memories, oh, they haunt my dreams</p>
+          <p>But I'm moving on, with a head of steam</p>
+          <p>It'll be all right</p>
+          <p>Just hold on tight</p>
+          <br/>
+          <p>In the morning, sometimes I feel I can't go on</p>
+          <p>And the darkness is a heavy load</p>
+          <br/>
+          <p>But the light always shines from the end of the road</p>
+          <br/>
+        </article>
+        <article class="col">
+          <br/>
+          <p><b>Reprise</b></p>
+          <p>Yeah, you've got to hold on tight</p>
+          <p>Everything's gonna be all right</p>
+          <p>Everybody's looking for a brand new day</p>
+          <p>I say, it's gonna be okay</p>
+          <br/>
+          <p><b>Reprise 2x</b></p>
+          <br/>
+          <p>Everybody's looking for a brand new day</p>
+          <p>I say, it's gonna be okay</p>
+          <p>It's gonna be okay</p>
+          <br/>
+          <img src="keys sm.jpg" style="width: 100%;">
+        </article>
+      </article>
+    </div>
+    <div class="inside right">
+      <h1>6 &middot Gold Beat</h1>
+      <p>"Gold Beat is just fun. I wanted to write something that was going to be challenging, simple, and groovy. My biggest influences on this were definitely Scary Pockets and Brasstracks. With some lyrical help from Bobby and a website open with everything that rhymes with "Corolla," this tune came together fast. - <i>Spencer Breeze</i></p>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="inside left">
+      <h1>5 &middot Avenue L</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quasi earum alias at aperiam? Impedit doloribus architecto fuga accusamus. Omnis aliquid voluptatem corrupti consectetur. Suscipit iure harum accusantium quas doloremque?</p>
+    </div>
+    <div class="inside right">
+      <h1>2 &middot Stay Awhile</h1>
+      <p>"The Guests came together in February 2018 when Spencer was asked to get a group together for a friend's mocktail party. We had so much fun playing together and we just had to keep it going. A few months in, I had this song written out on keys and Aaron came over to my house and came up with the horn parts to fill in the sonic gaps. When he showed me the horn break he put together for the end of the tune I was floored. Weeks later, we performed this as our first original song." - <i>David Buckley</i></p>
+      <article class="row">
+        <article class="col">
+          <h3>Lyrics</h3>
+          <p><b>Chorus</b></p>
+          <p>Babe, you know it's been a long day</p>
+          <p>But darling, please don't go away</p>
+          <p>I'm hoping that you will stay awhile</p>
+          <p>I may be just another stray</p>
+          <p>And I've waited way too long to say</p>
+          <p>I'm hoping that you will stay awhile</p>
+          <br/>
+          <img src="wedding sm.jpg" alt="pic" style="width: 95%;">
+        </article>
+        <article class="col">
+          <br/>
+          <p>I couldn't believe that you would be the right one for me</p>
+          <p>But being with you soon grew into pure ecstasy</p>
+          <p>I close my eyes and realize that I all need is you</p>
+          <p>And nothing in this whole wide world could ever be more true</p>
+          <br/>
+          <p><b>Chorus</b></p>
+          <br/>
+          <p>And I've got a dream, but it's slowly drifting out of my view</p>
+          <p>And maybe it's me who's slowly drifting closer to you</p>
+          <p>I'm ready now to sacrifice what's keeping me away</p>
+          <p>The chance to make a world with you is worth any price I'd pay</p>
+          <br/>
+          <p><b>Chorus</b></p>
+        </article>
+      </article>
+    </div>
+  </section>
+
+  <section class="row" style="margin-bottom: 0;">
+    <div class="inside left">
+      <h1>3 &middot When I Look In Your Eyes</h1>
+      <p>"I wrote this song on acoustic guitar in 2017. It's about personal struggles with weakness and finding salvation in someone you can put your faith in. The vibe of the song was primarily inspired by Allen Stone's self titled record, especially his slower tracks that feature acoustic guitar." - <i>David Buckley</i></p>
+      <article class="row">
+        <article class="col">
+          <h3>Lyrics</h3>
+          <p>I know I'm not perfect</p>
+          <p>But I'm trying, yeah, I'm trying</p>
+          <p>To be a little better</p>
+          <p>To stop my soul from dying</p>
+          <p>Cuz I want to be the one for you</p>
+          <p>And I hope you feel the same way too</p>
+          <br/>
+          <p><b>Chorus</b></p>
+          <p>When I look in your eyes</p>
+          <p>I feel safer than I did before</p>
+          <p>It should be no surprise</p>
+          <p>I don't feel worried anymore</p>
+          <br/>
+          <p>And I'm just a man</p>
+          <p>With my own share of problems</p>
+          <p>And I'll do all I can</p>
+          <p>To be the one to solve them</p>
+          <p>Cuz I want to be the one for you</p>
+          <p>And I hope you feel the same way too</p>
+          <br/>
+          <p><b>Chorus 3x</b></p>
+        </article>
+        <article class="col">
+          <img src="sax.jpg" alt="pic" style="width: 100%; margin-top: 4px;">
+        </article>
+      </article>
+    </div>
+    <div class="inside right">
+      <h1>4 &middot Consider Myself Packed</h1>
+      <p>"Nowadays, I'm awake a little earlier because I have a young son. Sometimes while he's playing at 6 am I'll pull out my acoustic guitar and pluck out some harmonies. I love Steely Dan and the inverted chords in the verse of this song were my best attempt on one of those early mornings to sound like Fagen and Becker. Once I had that worked out, I recalled a chord progression I wrote way back in 2014 and knew that it would fit perfectly in the chorus. The process was a reminder to retain musical ideas even if they don't make a full track yet, there will be a spot for them down the road." - <i>David Buckley</i></p>
+      <article class="row">
+        <article class="col">
+          <h3>Lyrics</h3>
+          <p>April showers have been going on for months</p>
+          <p>Sometimes the rain is nice</p>
+          <p>Trying to bathe in the sunlight of distraction</p>
+          <p>Goes back on my own advice</p>
+          <br/>
+          <p>Walking alone down the lonely streets of somewhere</p>
+          <p>I used to have a guide</p>
+          <p>Hooked on a line that's been drifting with the current</p>
+          <p>Trying to stave the tide</p>
+          <br/>
+        </article>
+        <article class="col">
+          <br/>
+          <p><b>Chorus</b></p>
+          <p>Yeah I'm on a mission</p>
+          <p>I'm gonna take my life back</p>
+          <p>I've got a vision</p>
+          <p>You're gonna see me finally tighten up my slack</p>
+          <p>So am I moving on? Consider myself packed</p>
+          <p>Am I moving on? Consider myself packed</p>
+          <p>Yeah consider myself packed</p>
+          <p>Yeah consider myself</p>
+          <br/>
+          <p>Going along with my everday afflicion</p>
+          <p>Moving right through the crowds</p>
+          <p>Singing my song that's become my new addiction</p>
+          <p>Hope it don't get too loud</p>
+          <br/>
+          <p><b>Chorus 2x</b></p>
+        </article>
+      </article>
+    </div>
+  </section>
+  
+</body>
+</html>

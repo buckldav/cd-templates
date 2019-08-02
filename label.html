@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <title>Label</title>
+  <style>
+    @media all {
+      *{ color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      body {
+        font-family: 'Josefin Sans', sans-serif;
+        color: #0D2149;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 0.5in;
+        margin-bottom: 0.5in;
+        margin-left: 0.015in;
+      }
+      div {
+        height: 5in;
+        width: 5in;
+        border-radius: 50%;
+        background: #eee;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+      }
+      .outer {
+        position:absolute;
+        left: 0.125in;
+        top: 0.125in;
+        border-radius: 50%;
+        height: 4.75in;
+        width: 4.75in;
+        background: transparent;
+        border: 1px dashed #aaa;
+      }
+      .inner {
+        position:absolute;
+        left: 1.6875in;
+        top: 1.6875in;
+        border-radius: 50%;
+        height: 1.625in;
+        width: 1.625in;
+        background: #fff;
+        border: 1px dashed #aaa;
+      }
+      .title {
+        text-align: center;
+        margin-top: 1in;
+      }
+      .tracks {
+        margin-top: 1.825in;
+        width: 2.25in;
+        height: 1.25in;
+        display: flex;
+        flex-direction: column;
+      }
+      .tracks p {
+        text-align: center; 
+        font-weight: bold;
+      }
+      .tracks span {
+        font-size: 0.75em;
+        margin: 0 1em;
+        text-align: center;
+      }
+      img {
+        position: absolute;
+        top: 36%;
+        opacity: 0.5;
+        height: 1.4in;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="outer"></div>
+    <div class="inner"></div>
+    <img src="cocktail b.png" style="left: 5%;">
+    <img src="cocktail trumpv.png" style="right: 5%;">
+    <h1 class="title">the guests</h1>
+    <section class="tracks">
+      <p>mocktail party</p>
+      <span>hold on tight &middot; 4:00</span>
+      <span>stay awhile &middot; 4:00</span>
+      <span>when i look in your eyes &middot; 4:00</span>
+      <span>consider myself packed &middot; 4:00</span>
+      <span>avenue l &middot; 4:00</span>
+      <span>gold beat &middot; 4:00</span>
+    </section>
+  </div>
+  <div>
+    <div class="outer"></div>
+    <div class="inner"></div>
+    <img src="cocktail b.png" style="left: 5%;">
+    <img src="cocktail trumpv.png" style="right: 5%;">
+    <h1 class="title">the guests</h1>
+    <section class="tracks">
+      <p>mocktail party</p>
+      <span>hold on tight &middot; 4:00</span>
+      <span>stay awhile &middot; 4:00</span>
+      <span>when i look in your eyes &middot; 4:00</span>
+      <span>consider myself packed &middot; 4:00</span>
+      <span>avenue l &middot; 4:00</span>
+      <span>gold beat &middot; 4:00</span>
+    </section>
+  </div>
+</body>
+</html>
