@@ -8,8 +8,15 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
   <!-- <link href="https://fonts.googleapis.com/css?family=Cantata+One&display=swap" rel="stylesheet"> -->
   <style>
+    /*
+    Blue: #00b8ff
+    Yellow: #ffaf14
+    Cyan: #00fff8
+    Lime: #86e603
+    Magneta: #ff00f6
+    */
     @media all {
-      *{ color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      *{ color-adjust: exact; -webkit-print-color-adjust: exact; -moz-print-color-adjust: exact; }
       body {
         /* font-family: "Cantata One" serif; */
         font-family: 'Josefin Sans', sans-serif;
@@ -26,11 +33,6 @@
       hr {
         border-color: #EEE;
         border-width: 0px 0px 1px 0px;
-      }
-      .mask {
-        z-index: 1;
-        width: 100%;
-        height: 100%;
       }
       #title {
         z-index: 2;
@@ -58,13 +60,18 @@
       }
       .row>div.inside {
         background: #eee;
-        color: #0D2149;
+        /* color: #0D2149; */
+        color: #303030;
         font-size: 0.75em;
         padding: 1em;
         width: calc(4.75in - 3em);
         height: calc(4.75in - 2em);
       }
-  
+      .inside img:not(.color) {
+        opacity: 0.6;
+        -webkit-filter: grayscale(100%) brightness(1.2); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%) brightness(1.2);
+      }
       .row>div.left {
         padding-right: 2em;
       }
@@ -73,6 +80,7 @@
       }
       .col {
         width: 50%;
+        position: relative;
       }
       .col>p {
         margin: 0;
@@ -82,11 +90,11 @@
       }
 
       #front {
-        background-image: url('square m.png');
+        background-image: url('mocktail doodle.png');
       }
       #back {
-        background: #141414;
-        color: #eee;
+        background: #303030;
+        color: #00b8ff;
         padding: 1em;
         width: calc(4.75in - 2em);
         height: calc(4.75in - 2em);
@@ -95,7 +103,7 @@
         font-size: 0.75rem;
       }
       #back h3 {
-        color: #cda34f;
+        color: #ffaf14;
         font-weight: 100;
         font-size: 1.17em;
       }
@@ -106,7 +114,7 @@
         font-size: 1em;
       } 
       #acknowledgements {
-        margin: 5em 0 4em;
+        margin: 2.5em 0 0;
       }
       #copyright {
         position: absolute;
@@ -116,6 +124,15 @@
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
+      }
+      article.row,
+      img.color,
+      .col>img {
+        position: absolute;
+        bottom: 1em;
+      }
+      .col>img {
+        bottom: 0;
       }
     }
   </style>
@@ -140,23 +157,27 @@
       <p id="acknowledgements">
         To our families, our wives, and children who are with us the whole way and supportive of our musical dreams. 
         To Madison Van Vleet and Corinn LeBaron for providing amazing live vocals for the group.
-        To Noah Lefgren for always being on call to lend his musical talents.
+        To Noah Lefgren for always being on call to lend your musical talents.
         To Ahi Muse steak and sushi in Orem for providing us with our first steady gig and sticking with us through the up and down performances.
         To Merit Academy for letting us use their music room as rehearsal space.
         To all our friends who have been there at gigs and put in time behind the scenes to take pictures, promote us, and support us.
-        Thank you all for making this possible.
+        Thank you all for making this possible.<br/><br/>
+        Recorded at the Buckley's house.<br/> 
+        Produced by Robert Alger and David Buckley.<br/>
+        Mixed by Robert Alger, David Buckley, and Aaron Vaughn.<br/> 
+        Mastered by Robert Alger.<br/>
+        Cover art by J.R. Chambers.<br/>
       </p>
       <p id="copyright">
-        Produced, mixed, and mastered by Robert Alger and David Buckley<br/>
         theguests.band &middot; mountainsidemusic.com &middot; davidjaybuckley.com<br/>
-        &copy; 2019 Mountainside Music &middot; Provo, UT
+        &copy; 2019 Mountainside Music &middot; Provo, UT        
       </p>
     </div>
     <div id="front">
-      <div id="mask" style="background: rgba(31, 51, 32, 0.2);"></div>
+      <!-- <div id="mask" style="background: rgba(31, 51, 32, 0.2);"></div>
       <div id="title">
         <span>mocktail party</span>
-      </div>
+      </div> -->
     </div>
   </section>
   
@@ -165,7 +186,7 @@
       <h1>1 &middot Hold On Tight</h1>
       <p>"One of my favorite sounds is the Hammond B3 Organ. I love listening to guys like Jimmy Smith, Joey DeFrancesco, and Cory Henry. I wrote the shout chorus to this song in 2017 while experimenting with some traditional gospel chord changes and the rest materialized once The Guests came together and Cooper's voice took the tune to the heights I had hoped it could reach. I just wanted to get a song with an uplifting message out there." - <i>David Buckley</i></p>
       <article class="row">
-        <article class="col">
+        <article class="col" style="padding-bottom: 1em;">
           <h3>Lyrics</h3>
           <p>So many things in this world try to get you down</p>
           <p>But I'm telling you, if you stick around</p>
@@ -197,20 +218,55 @@
           <p>I say, it's gonna be okay</p>
           <p>It's gonna be okay</p>
           <br/>
-          <img src="keys sm.jpg" style="width: 100%;">
+          <img src="keys sm.jpg" style="width: 95%;">
         </article>
       </article>
     </div>
     <div class="inside right">
       <h1>6 &middot Gold Beat</h1>
       <p>"Gold Beat is just fun. I wanted to write something that was going to be challenging, simple, and groovy. My biggest influences on this were definitely Scary Pockets and Brasstracks. With some lyrical help from Bobby and a website open with everything that rhymes with "Corolla," this tune came together fast. - <i>Spencer Breeze</i></p>
+      <article class="row">
+        <article class="col">
+          <h3>Lyrics</h3>
+          <p>Bunch of suits sitting in their office, in their seats</p>
+          <p>They're searching for something live for, a pulse, or even a beat</p>
+          <p>Let me tell you friend, all that glitters will turn to mold</p>
+          <p>I ain't no king Midas but that beat was gold</p>
+          <br/>     
+          <img src="ahi.jpg" alt="" style="width: 95%;">     
+        </article>
+        <article class="col" style="padding-bottom: 2em;">
+          <br/>
+          <p><b>Chorus</b></p>
+          <p>I don't care if you drive a Corolla</p>
+          <p>I don't care if you cook with canola</p>
+          <p>Come on, get up, move your feet</p>
+          <p>No need for money when you got the beat</p>
+          <p>I don't care if you're from Pensacola</p>
+          <p>I don't care if you drink Coca-Cola</p>
+          <p>Come on, get up, move your feet</p>
+          <p>No need for money when you got the beat</p>
+          <br/>
+          <p>We spend our whole lives working day and night, always on the grind</p>
+          <p>You'll never ease that appetite if money's on the mind</p>
+          <p>So grow up, live a little, before it gets old</p>
+          <p>I ain't from El Dorado but that beat was gold</p>
+          <br/>
+          <p><b>Chorus 2x</b></p>
+        </article>
+      </article>
     </div>
   </section>
 
   <section class="row">
     <div class="inside left">
       <h1>5 &middot Avenue L</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat quasi earum alias at aperiam? Impedit doloribus architecto fuga accusamus. Omnis aliquid voluptatem corrupti consectetur. Suscipit iure harum accusantium quas doloremque?</p>
+      <p>"The inspiration for this tune comes from my time living on the far-south side of Chicago called, interestingly enough, the 'East Side.' 
+        The roads in the East Side, and most of Chicago, are an intricate weave of one-way streets that can be confusing for newcomers and visitors. 
+        The trains and the soaring interstate speedway nicknamed 'the skyway' only add to the confusion for unfamiliar travellers. 
+        Nevertheless, there are quirks that make the madness beautiful: the series of drawbridges, the aging drydocks, the McDonald's in the middle of a six-lane freeway. 
+        I tried to capture some of that beautiful madness here." - <i>Robert Alger</i></p>
+      <img src="prom sm.jpg" class="color" style="width: 95%;">
     </div>
     <div class="inside right">
       <h1>2 &middot Stay Awhile</h1>
@@ -228,7 +284,7 @@
           <br/>
           <img src="wedding sm.jpg" alt="pic" style="width: 95%;">
         </article>
-        <article class="col">
+        <article class="col" style="padding-bottom: 1em;">
           <br/>
           <p>I couldn't believe that you would be the right one for me</p>
           <p>But being with you soon grew into pure ecstasy</p>
@@ -252,7 +308,7 @@
     <div class="inside left">
       <h1>3 &middot When I Look In Your Eyes</h1>
       <p>"I wrote this song on acoustic guitar in 2017. It's about personal struggles with weakness and finding salvation in someone you can put your faith in. The vibe of the song was primarily inspired by Allen Stone's self titled record, especially his slower tracks that feature acoustic guitar." - <i>David Buckley</i></p>
-      <article class="row">
+      <article class="row" style="width: 95%;">
         <article class="col">
           <h3>Lyrics</h3>
           <p>I know I'm not perfect</p>
@@ -278,7 +334,7 @@
           <p><b>Chorus 3x</b></p>
         </article>
         <article class="col">
-          <img src="sax.jpg" alt="pic" style="width: 100%; margin-top: 4px;">
+          <img src="sax.jpg" alt="pic" style="width: 95%; margin-top: 4px;">
         </article>
       </article>
     </div>
@@ -298,6 +354,7 @@
           <p>Hooked on a line that's been drifting with the current</p>
           <p>Trying to stave the tide</p>
           <br/>
+          <img src="drum sm.jpg" style="width: 95%;">
         </article>
         <article class="col">
           <br/>

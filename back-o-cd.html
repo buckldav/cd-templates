@@ -8,10 +8,12 @@
   <title>Back</title>
   <style>
     @media all {
-      *{ color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      *{ color-adjust: exact; -webkit-print-color-adjust: exact; -moz-print-color-adjust: exact;}
       body {
+        -webkit-print-color-adjust: exact; /*chrome & webkit browsers*/
+        color-adjust: exact; /*firefox & IE */
         font-family: 'Josefin Sans', sans-serif;
-        color: #EEE;
+        color: #00b8ff;
         margin: 0;
         display: flex;
         justify-content: center;
@@ -22,7 +24,8 @@
       }
       section {
         height: 4.536in;
-        background: #373f27;
+        background-color: unset;
+        box-shadow: inset 0 0 0 1000px #303030;
         display: flex;
       }
       div {
@@ -32,7 +35,13 @@
         text-align: center;
         font-size: 20px;
         padding: 4.72px;
-        background-color: rgba(44, 51, 32, 0.1);/*#2c3320;*/
+        /*background-color: rgba(44, 51, 32, 0.1);#2c3320;*/
+        border-style: dashed;
+        border-color: #555555;
+        border-width: 0;
+        border-right-width: 1px;
+        border-left-width: 1px;
+        color: #ffaf14;
       }
       main {
         position: relative;
@@ -59,12 +68,15 @@
         text-align: center;
         font-size: 0.75em;
       }
+      h1 {
+        color: #ffaf14;
+      }
     }
   </style>
 </head>
 <body>
   <section>
-    <div>the guests &middot; mocktail party</div>
+    <div style="border-right-width: 1px;">the guests &middot; mocktail party</div>
     <main>
       <h1>mocktail party</h1>
       <hr/>
@@ -76,7 +88,7 @@
       <h3>gold beat</h3>
       <p id="copyright">&copy; 2019 Mountainside Music &middot; Provo, UT</p>
     </main>
-    <div>the guests &middot; mocktail party</div>
+    <div style="border-left-width: 1px;">the guests &middot; mocktail party</div>
   </section>
 </body>
 </html>
